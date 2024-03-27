@@ -1,23 +1,17 @@
 // AllRoutes.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './Navbar';
+import { Route, Routes } from "react-router-dom";
 import Login from './Login';
 import Signup from './Signup';
 
-const AllRoutes = () => {
-  return (
-    <Router>
-      <div>
-        <Navbar />
-        <Switch>
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={Signup} />
 
-        </Switch>
-      </div>
-    </Router>
-  );
+const AllRoutes = () => {
+    return (
+        <Routes>
+            <Route path="/login" element={<Login/>} />
+            <Route path="/signup" element={<Signup />} />
+        </Routes>
+    );
 };
 
 export default AllRoutes;
